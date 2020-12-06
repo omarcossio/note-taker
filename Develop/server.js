@@ -8,7 +8,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    res.send('Hello!');
+  //  res.send('Hello!');
+  res.sendFile('/Users/omarmcossio/Desktop/Bootcamp/Homework/hw9/note-taker/Develop/public/index.html');
 });
 
 
@@ -16,13 +17,6 @@ app.use(express.urlencoded({ extend: true}));
 app.use(express.json());
 
 
-
-
-// Router
-/*
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app); 
-*/
 require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 

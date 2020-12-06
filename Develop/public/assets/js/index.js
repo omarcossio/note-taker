@@ -93,10 +93,14 @@ const handleNewNoteView = function () {
 
 // If a note's title or text are empty, hide the save button
 // Or else show it
+
+console.log("IS THE TEXT BLANK?: " +!$noteTitle.val().trim());
 const handleRenderSaveBtn = function () {
   if (!$noteTitle.val().trim() || !$noteText.val().trim()) {
+    console.log("The test is EMPTY");
     $saveNoteBtn.hide();
   } else {
+    console.log("The test is NOT EMPTY");
     $saveNoteBtn.show();
   }
 };
